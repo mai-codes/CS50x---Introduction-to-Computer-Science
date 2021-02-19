@@ -1,0 +1,38 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+Sort 3 was inbetween sort 1 and 2 for the speed test. Since bubble sort compares two numbers at once, it is faster
+than selection sort especially when the numbers are already sorted. Bubble sort outperforms selection sort for
+a dataset where the numbers are already sorted.
+
+sort2 uses: Merge Sort
+
+How do you know?:
+Sort 2 was the fastest sorting algorithm, therefore it is Merge sort.
+Merge sort has a time complexity of O(nlogn), which is faster than the other two algorithms.
+
+sort3 uses: Selection Sort
+
+How do you know?:
+Selection sort has the same time complexity as Bubble sort; however, it is slightly slower because it looks through
+entire array of numbers individually, unlike Bubble sort which compares two numbers as once.
+On smaller datasets, the difference is small and speed is unnoticeable.
+However, as the dataset increases, there is a noticeable speed difference
+between the different sorting algorithms, especially if the numbers aren't already sorted.
+
+
+// Test
+sort 1 reversed50000:
+real    0m11.889s
+user    0m4.806s
+sys     0m0.072s
+
+sort 2 reversed50000:
+real    0m2.388s
+user    0m0.030s
+sys     0m0.064s
+
+sort 3 reversed50000:
+real    0m6.857s
+user    0m2.547s
+sys     0m0.072s
