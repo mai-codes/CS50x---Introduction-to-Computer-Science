@@ -1,0 +1,286 @@
+.projectsSection {
+  padding: 0 0em;
+  background-color: #fbf5ff;
+}
+
+@media only screen and (min-width: 850px) {
+  .projectsSection {
+    padding: 0 10em;
+  }
+}
+
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 -2em 0em;
+}
+
+.projectsBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectsBar h1 {
+  font-family: "PT Mono", monospace;
+  color: rgb(179, 44, 179);
+  font-size: 2em;
+  font-weight: 500;
+  padding: 0.5em .5em;
+  margin: 0 ;
+}
+
+.projectsBar img {
+  height: 3em;
+  padding: 0.5em 0;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.projectsBar img:hover {
+  transform: scale(1.1);
+}
+
+.projectHR {
+  text-align: center;
+  width: 80%;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  margin: 1em 15%;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin: 2em 0.8em;
+}
+
+@media screen and (max-width: 875px) {
+  .project {
+    min-width: 45%;
+    margin: 1em 0;
+    flex-wrap: wrap;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 60%;
+  margin: 1em 1em 1em 1em;
+}
+
+.nameAndLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-family: "PT Mono", monospace;
+}
+
+.linksContainer {
+  display: flex;
+}
+
+/* Visit and GitHub link effects */
+.linksContainer a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  font-family: "PT Mono", monospace;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgb(179, 44, 179);
+  text-shadow: rgb(179, 44, 179);
+  text-decoration: none;
+  text-transform: lowercase;
+  margin: 0.5em 0.5em;
+  padding: 0 10px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.linksContainer a::before,
+.linksContainer a::after {
+  position: absolute;
+  width: 45px;
+  height: 1.5px;
+  background: rgb(179, 44, 179);
+  content: '';
+  opacity: 0.2;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+
+.linksContainer a::before {
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.linksContainer a::after {
+  right: 0;
+  bottom: -1px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.linksContainer a:hover::before,
+.linksContainer a:hover::after,
+.linksContainer a:focus::before,
+.linksContainer a:focus::after {
+  opacity: 1;
+}
+
+.linksContainer a:hover::before,
+.linksContainer a:focus::before {
+  left: 50%;
+  -webkit-transform: rotate(0deg) translateX(-50%);
+  -moz-transform: rotate(0deg) translateX(-50%);
+  transform: rotate(0deg) translateX(-50%);
+}
+
+.linksContainer a:hover::after,
+.linksContainer a:focus::after {
+  right: 50%;
+  -webkit-transform: rotate(0deg) translateX(50%);
+  -moz-transform: rotate(0deg) translateX(50%);
+  transform: rotate(0deg) translateX(50%);
+}
+
+.nameAndLinks p {
+  margin: 0;
+}
+
+.linksContainer a:hover {
+  font-family: "PT Mono", monospace;
+  text-decoration: none;
+  color: rgb(179, 44, 179);
+  text-shadow: 0 1px 1px rgb(179, 44, 179);
+  margin: 0.5em 0.5em;
+}
+
+.projectname {
+  margin: 0;
+  padding: 0;
+}
+
+.projectname h2 {
+  font-family: "PT Mono", monospace;
+  margin-bottom: 0.25em;
+  font-weight: 400;
+  color: #000066;
+}
+
+.projectdesc {
+  margin: 0;
+  padding: 0;
+}
+
+.projectdesc h3 {
+  font-family: "PT Mono", monospace;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 0.25em;
+  padding-bottom: 1em;
+}
+
+.excerpt {
+  text-align: left;
+  margin-bottom: 0;
+  font-family: "PT Mono", monospace;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+.excerpt ul li{
+  text-align: left;
+  margin-bottom: 0;
+  font-family: "PT Mono", monospace;
+}
+
+.mockupAndLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mockupContainer {
+  position: relative;
+  margin: 0 1em 1em 1em;
+}
+
+.mockupContainer:hover .mockupOverlay {
+  opacity: 1;
+}
+
+.mockup {
+  display: block;
+  margin: 0;
+}
+
+.mockupOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.7s ease;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.techStack {
+  text-align: center;
+  padding: 0 0 0.5em 0;
+  position: absolute;
+  align-self: center;
+  justify-content: center;
+}
+
+.techStack img {
+  width: 6em;
+  max-width: 100%;
+  vertical-align: middle;
+  margin: 0.75em 0.75em;
+}
+
+.contentInner ul {
+  list-style-type: none;
+  font-family: "PT Mono", monospace;
+
+  margin-left: 0.25em;
+  padding-left: 20px;
+}
+
+.contentInner li {
+  position: relative;
+  padding-left: 0.5em;
+  margin: 0 0 0.75em 0;
+}
+
+.contentInner li:before {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  font-family: FontAwesome;
+  content: '\f067';
+}

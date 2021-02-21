@@ -1,0 +1,434 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+.courseSection {
+  padding: 0 1em;
+  background: #fbf5ff;
+  margin: 0 0 -2em -3em;
+}
+
+@media only screen and (min-width: 950px) {
+  .courseSection {
+    padding: 0 10em;
+  }
+}
+
+/* Section Header */
+
+.courseBar {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+.courseBar h1 {
+  font-family: "PT Mono", monospace;
+  font-size: 2em;
+  color: rgb(179, 44, 179);
+  font-weight: 400;
+  padding: 0.5em 0;
+  margin: 0;
+}
+
+.courseBar img:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 600px) {
+  .courseBar h1 {
+    padding: 0.5em 1em;
+    margin: 2;
+  }
+}
+/* Tap for details  */
+
+.tapForDetails {
+  font-family: "PT Mono", monospace;
+  letter-spacing: .5px;
+  color: rgb(179, 44, 179);
+  text-align: center;
+  padding: 1em 0 0 0;
+}
+
+/* Timeline */
+
+.courseTopContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.courseTopContainer img {
+  max-height: 120px;
+  max-width: 120px;
+  padding-top: 50px;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+.cdTimeline {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 0 45em 0;
+  width: 50%;
+}
+
+.cdTimelineContainer {
+  position: absolute;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0;
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width: 600px) {
+  .cdTimeline {
+    overflow: hidden;
+    margin: 0;
+    padding: 0 0 50em 0;
+  }
+  .cdTimelineContainer {
+    position: absolute;
+    width: 100%;
+    padding: 2em 0;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin: 1.5rem;
+  font-family: "PT Mono",monospace;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .card .general{
+    width: 225px;
+    height: 300px;
+    font-size: 0.5em;
+  }
+  .moreInfo h1,
+  .moreInfo li,
+  .general h3,
+  .general h4,
+  .general h5 {
+    font-size: 0.5em;
+    font-family: "PT Mono",monospace;
+    margin: 0.5em;
+  }
+
+  .general h3{
+    top: 200px;
+  }
+
+  .courseTopContainer img {
+    max-height: 100px;
+    max-width: 100px;
+    padding-top: 50px;
+    padding-left: 20px;
+    justify-content: left;
+  } 
+  .card {
+    height: 450px;
+    width: 250px;
+  }
+
+  .userCard{
+    width: 100%;
+    height: 25%;
+  }
+}
+
+.card h1 {
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+
+  .card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: lavender;
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .card .additional .userCard {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+  }
+
+  .card .additional .userCard::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0,0,0,0.025);
+  }
+
+  .card .additional .moreInfo {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+    padding-top: 2em;
+    padding-right: 0.5em;
+  }
+
+  .card .additional .moreInfo h1 {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .card .additional .moreInfo ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    font-family: "PT Mono",monospace;
+    font-size: .8em;
+  }
+
+  .card .additional .moreInfo li {
+    margin-bottom: 0;
+    padding-bottom: 0.5em;
+    position: relative;
+    padding-left: 0.5em;
+    margin: 0 0 0.75em 0;
+  }
+
+  .card .additional .moreInfo li:before {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    margin:0 5px 0 -15px;
+
+  }
+
+  .card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  .card .additional .coords span + span {
+    float: right;
+  }
+
+  .card .additional .stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+  }
+
+  .card .additional .stats > div {
+    flex: 1;
+    text-align: center;
+  }
+
+  .card .additional .stats i {
+    display: block;
+  }
+
+  .card .additional .stats div.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .card .additional .stats div.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+  }
+
+  .stats img {
+    width: 3em;
+    max-width: 100%;
+    vertical-align: middle;
+    margin: 0;
+  }
+
+  .card .general {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0.7rem;
+    font-family: "PT Mono",monospace;
+    font-weight: 400;
+    font-size: 1em;
+  }
+
+  .general h3 {
+    font-family: "PT Mono",monospace;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+  }
+
+  .general h4 {
+    font-family: "PT Mono",monospace;
+    font-weight: 400;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.5em 0em;
+  }
+
+  .general h5 {
+    font-family: "PT Mono",monospace;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0.5em 0em;
+  }
+
+  .card .general .more{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.6em;
+  }
+
+  .linksContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Visit and GitHub link effects */
+  .linksContainer a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    font-family: "PT Mono", monospace;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(179, 44, 179);
+    text-shadow: rgb(179, 44, 179);
+    text-decoration: none;
+    text-transform: lowercase;
+    margin: 0.5em 0.5em;
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  .linksContainer a::before,
+  .linksContainer a::after {
+    position: absolute;
+    width: 45px;
+    height: 1.5px;
+    background: rgb(179, 44, 179);
+    content: '';
+    opacity: 0.2;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .linksContainer a::before {
+    top: 0;
+    left: 0;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  .linksContainer a::after {
+    right: 0;
+    bottom: -1px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+  }
+
+  .linksContainer a:hover::before,
+  .linksContainer a:hover::after,
+  .linksContainer a:focus::before,
+  .linksContainer a:focus::after {
+    opacity: 1;
+  }
+
+  .linksContainer a:hover::before,
+  .linksContainer a:focus::before {
+    left: 50%;
+    -webkit-transform: rotate(0deg) translateX(-50%);
+    -moz-transform: rotate(0deg) translateX(-50%);
+    transform: rotate(0deg) translateX(-50%);
+  }
+
+  .linksContainer a:hover::after,
+  .linksContainer a:focus::after {
+    right: 50%;
+    -webkit-transform: rotate(0deg) translateX(50%);
+    -moz-transform: rotate(0deg) translateX(50%);
+    transform: rotate(0deg) translateX(50%);
+  }
+
+  .nameAndLinks p {
+    margin: 0;
+  }
+
+  .linksContainer a:hover {
+    font-family: "PT Mono", monospace;
+    text-decoration: none;
+    color: rgb(179, 44, 179);
+    text-shadow: 0 1px 1px rgb(179, 44, 179);
+    margin: 0.5em 0.5em;
+  }
+} 

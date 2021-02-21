@@ -1,0 +1,68 @@
+/* When I'm not coding...  */
+
+.aboutExtra {
+  padding: 1em 10em;
+  margin: 0 -1em;
+  text-align: left;
+  background-color: #fbf5ff;
+}
+
+.aboutExtra h2 {
+  font-family: "PT Mono", monospace;
+  font-size: 2em;
+  color: rgb(179, 44, 179);
+  font-weight: 500;
+  letter-spacing: .5px;
+  padding-left: 0.5em;
+}
+
+.aboutExtra h3 {
+  font-family: "PT Mono", monospace;
+  font-size: .9em;
+  color: rgb(179, 44, 179);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: .5px;
+  margin-top: -1.5em;
+}
+
+.aboutExtra ul {
+  font-family: "PT Mono",monospace;
+  /* font-weight: bold; */
+  letter-spacing: -0.2px;
+  line-height: .6em;
+}
+
+.extrasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 660px) {
+  .aboutExtra {
+    flex-direction: column;
+    margin-left: -150px;
+    padding-right: 3px;
+  }
+  .aboutExtra ul {
+    line-height: 1em;
+  }
+}
+
+.extra {
+  text-align: center;
+  margin: 1em 1.25em;
+}
+
+.extra img {
+  max-height: 80px;
+  margin: 0 5px;
+}
+
+.extra p {
+  font-family: "PT Mono",monospace;
+  letter-spacing: .5px;
+  margin: .5em 0 0 0;
+}

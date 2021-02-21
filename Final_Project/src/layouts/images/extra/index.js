@@ -1,0 +1,5 @@
+export { default as realmadrid } from './realmadrid.png'
+export { default as plane } from './plane.png'
+export { default as spain } from './spain.png'
+export { default as denmark } from './denmark.png'
+export { default as concert } from './concert.png'

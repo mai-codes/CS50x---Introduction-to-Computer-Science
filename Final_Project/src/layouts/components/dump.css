@@ -1,0 +1,242 @@
+
+  
+  /* Business Cards */
+  
+  .courseBlock {
+    position: relative;
+    margin: 2em 0;
+    float: left;
+    width: 50%;
+    justify-content: center;
+  }
+  
+  .courseBlock:first-child {
+    margin-top: 0;  
+  }
+  
+  .courseBlock::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .courseContent {
+    position: relative;
+    margin-left: 60px;
+    padding: 1.25em;
+    background: #fff;
+    border-radius: 0.25em;
+    box-shadow: 0 3px 0 #d7e4ed;
+    /* transition: all 0.2s ease-in-out; */
+  }
+  
+  .courseContent:hover {
+    transform: scale(1.02);
+    box-shadow: 3px 3px 3px #d7e4ed;
+  }
+  
+  .courseContent h4 {
+    margin-bottom: 0.25em;
+    font-family: "PT Mono",monospace;
+    font-weight: 600;
+  }
+  
+  .courseContent h5 {
+    margin-bottom: 0.25em;
+    font-family: "PT Mono",monospace;
+    font-weight: 400;
+  }
+  
+  .courseContent::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  
+  .courseContent li {
+    font-family: "PT Mono", monospace;
+    font-size: 13px;
+    margin: 1em 0;
+    line-height: 1.25;
+  }
+  
+  .courseTopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  
+  .courseTopContainer img {
+    max-height: 25px;
+    max-width: 100px;
+    margin: 0 0 0 .5em;
+  }
+  
+  .cdTimelineReadMore {
+    font-family: "PT Mono", monospace;
+    font-size: 12px;
+    padding: 0.5em 0.75em;
+    background: #acb7c0;
+    color: #fff;
+    border-radius: 0.25em;
+  }
+  
+  .cdTimelineReadMore,
+  .cdTimelineDate {
+    display: inline-block;
+  }
+  
+  .cdTimelineDate {
+    font-family: "PT Mono", monospace;
+    font-size: 12px;
+    letter-spacing: .5px;
+    float: right;
+    padding: 0.4em 0 0.5em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* For wider screens */
+  
+  @media only screen and (min-width: 950px) {
+    .tapForDetails {
+      padding: 1em 0 2em;
+    }
+  
+    .courseBlock {
+      margin: 1.5em 0;
+      display: flex;
+    }
+  
+    /* .courseBlock:nth-child .courseContent {
+      float: right;
+    } */
+  
+    .cdIsHidden {
+      visibility: hidden;
+    }
+  
+    .courseContent {
+      margin-left: 0;
+      padding: 1em 1.5em;
+      width: 45%;
+      transform: translateZ(0);
+    }
+  
+    /* .courseBlock:nth-child .courseContent::before {
+      top: 15px;
+      display: flex;
+      left: auto;
+      right: 100%;
+      border-color: transparent;
+      border-right-color: white;
+    } */
+  
+    /* .courseBlock:nth-child(even) .cdTimelineReadMore {
+      float: right;
+    } */
+    
+    /* .courseBlock:nth-child(even) .cdTimelineDate {
+      left: auto;
+      right: 122%;
+      text-align: right;
+      color: #000066;
+    } */
+  
+    .cdTimelineReadMore {
+      float: left;
+    }
+  
+    /* .cdTimelineDate {
+      font-family: "PT Mono", monospace;
+      font-size: 16px;
+      position: absolute;
+      width: 100%;
+      left: 122%;
+      top: 6px;
+      color: #000066;
+    } */
+  }
+  
+  .wrapCollabsible input[type='checkbox']:checked + label {
+    left: 27px;
+  }
+  
+  /* Label Content */
+  
+  .lblToggle {
+    padding: 0.75em 1em 0;
+    margin-top: 0.5em;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+  }
+  
+  .lblToggle::after {
+    content: ' ';
+    transition: transform 0.2s ease-out;
+  }
+  
+  /* Input Tag Toggle*/
+  
+  .toggle {
+    display: none;
+  }
+  
+  .toggle:checked + .lblToggle + .collapsibleContent {
+    max-height: 1000px;
+  }
+  
+  .toggle:checked + .lblToggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  /* Collapsible Content & Inner Content */
+  
+  .collapsibleContent {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.25s ease-in-out;
+    border-bottom-right-radius: 7px;
+  }
+  
+  .collapsibleContent .contentInner {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    padding: 0rem 0rem;
+  }
+  
+  .contentInner ul {
+    list-style-type: none;
+    margin-left: 0.25em;
+    padding-left: 20px;
+  }
+  
+  .contentInner li {
+    position: relative;
+    padding-left: 0.5em;
+    margin: 0 0 0.75em 0;
+  }
+  
+  .contentInner li:before {
+    position: absolute;
+    top: 0;
+    left: -1.5em;
+    font-family: FontAwesome;
+    content: '\f058';
+  }
+  
+  .toggle:checked + .lblToggle + .collapsibleContent {
+    max-height: 1000px;
+  }
+  
+  const iconImg = props.iconImg
+
+            {/* {iconImg
+            ? iconImg.map(image => <img src={image} alt="" />)
+            : 'loading...'} */}
+
+            iconImg={[cImg, pyImg, sqlImg]}

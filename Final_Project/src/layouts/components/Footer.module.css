@@ -1,0 +1,40 @@
+/* Footer {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #e2e0e0;
+} */
+
+.imgsContainer {
+  display: flex;
+  justify-content: center;
+  padding: 0 0;
+  padding-bottom: 1em;
+  text-align: center;
+  background-color: #fbf5ff;
+}
+
+.imgsContainer a {
+  margin: 0 1.25em;
+}
+
+.iconImg {
+  height: 60px;
+  margin-top: 2em;
+  transition: all 0.3s ease-in-out;
+}
+
+.iconImg:hover {
+  transform: scale(1.2);
+}
+
+.foot h3 {
+  position: absolute;
+  font-family: "PT Mono", monospace;
+  font-size: 1em;
+  text-align: center;
+  padding: -5em 0 2em 0;
+  color: rgb(179, 44, 179);
+  font-weight: 400;
+  margin: 0;
+}
