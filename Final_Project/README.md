@@ -8,13 +8,14 @@ front-end framework which leverages React. I decided to use GatsbyJS because of 
 and simple setup. I also wanted to practice and improve my React skills.
 
 #### Project Structure:
-
+```
 project                                 # main project directory
 ├── src                                 # source directory containing project files
 │   └── layouts                         # directory containing the static templates & images
 |       └── components                  # .js templates here
 |       └── images                      # image directory
 └── README.md                           # project README.md
+```
 
 #### Components:
 
