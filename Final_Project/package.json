@@ -15,7 +15,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "gatsby": "^1.9.247",
+    "gatsby": "^4.25.7",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-manifest": "^2.4.32",
